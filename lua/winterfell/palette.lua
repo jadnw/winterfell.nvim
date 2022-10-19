@@ -1,16 +1,16 @@
 local M = {}
 
-M.gems = {
-  amber = "orange",
-  apatite = "teal",
-  crystal = "white",
-  diamond = "cyan",
-  emerald = "green",
-  kunzite = "magenta",
-  obsidian = "purple",
-  ruby = "red",
-  sapphire = "blue",
-  topaz = "yellow",
+M.accents = {
+  orange = "orange",
+  teal = "teal",
+  white = "white",
+  cyan = "cyan",
+  green = "green",
+  magenta = "magenta",
+  purple = "purple",
+  red = "red",
+  blue = "blue",
+  yellow = "yellow",
 }
 
 M.styles = {
@@ -19,11 +19,11 @@ M.styles = {
   "hard",
 }
 
-function M.load_spec(gem, style)
-  gem = vim.tbl_contains(vim.tbl_keys(M.gems), gem) and gem or "emerald"
+function M.load_spec(accent, style)
+  accent = vim.tbl_contains(vim.tbl_keys(M.accents), accent) and accent or "green"
   style = vim.tbl_contains(M.styles, style) and style or "default"
   local colors = require("winterfell.colors")
-  return colors.gen_spec(M.gems[gem], colors.pal[style])
+  return colors.gen_spec(M.accents[accent], colors.pal[style])
 end
 
 return M

@@ -6,7 +6,7 @@ local M = {}
 
 function M.colorscheme()
   local config = require("winterfell.config")
-  local spec = palette.load_spec(config.gem, config.style)
+  local spec = palette.load_spec(config.accent, config.style)
   local hls = group.get_highlights(spec, config)
   highlight.hl(hls)
 

@@ -1,5 +1,5 @@
 local M = {
-  gem = "emerald",
+  accent = "green",
   style = "default",
 }
 
@@ -43,7 +43,7 @@ M.options = {
 
 function M.set(user_conf)
   user_conf = user_conf or {}
-  M.gem = user_conf.gem or M.gem
+  M.accent = user_conf.accent or M.accent
   M.style = user_conf.style or M.style
   M.options = vim.tbl_deep_extend("keep", user_conf.options or {}, M.options)
 end

@@ -1,14 +1,5 @@
 <h1 align="center">Winterfell</h1>
 <br />
-<div align="center">
-  <img
-    width="144px"
-    height="144px"
-    src="https://raw.githubusercontent.com/jadnw/winterfell.nvim/main/media/logo.svg"
-    alt="winterfell logo"
-  />
-</div>
-<br />
 <p align="center">
   <a href="https://github.com/jadnw/winterfell.nvim/stargazers"><img src="https://img.shields.io/github/stars/jadnw/winterfell.nvim?colorA=1b2125&colorB=73aace&style=for-the-badge"></a>
   <a href="https://github.com/jadnw/winterfell.nvim/issues"><img src="https://img.shields.io/github/issues/jadnw/winterfell.nvim?colorA=1b2125&colorB=f08789&style=for-the-badge"></a>
@@ -22,28 +13,18 @@
 
 ## Table of contents
 
-- [Overview](#overview)
 - [Requirements](#requirements)
-- [Palette & Gems](#palette-gems)
+- [Palette](#palette)
 - [Installation](#Installation)
 - [Setup](#setup)
 - [Supported Plugins](#supported-plugins)
 - [References](#references)
 
-## Overview
-
-<div align="center">
-  <img 
-    src="https://raw.githubusercontent.com/jadnw/winterfell.nvim/main/media/screenshot.png"
-    alt="Default Screenshot"
-  />
-</div>
-
 ## Requirements
 
 - Neovim >= 0.5.0
 
-## Palette & Gems
+## Palette
 
 Winterfell saves your eyestraints with a dark background and a pastel palette.
 
@@ -53,24 +34,6 @@ Winterfell saves your eyestraints with a dark background and a pastel palette.
     alt="Winterfell Palette"
   />
 </div>
-
-### Available Gems
-
-The accent color (foreground color of NvimTree directory, Dashboard header, ...)
-will change when you change the gem in [setup function](#setup)
-
-|Gem                |Accent Color   |
-|-------------------|---------------|
-|Emerald (default)  |Green          |
-|Amber              |Orange         |
-|Apatite            |Teal           |
-|Crystal            |White          |
-|Diamond            |Cyan           |
-|Kunzite            |Magenta        |
-|Obsidian           |Purple         |
-|Ruby               |Red            |
-|Sapphire           |Blue           |
-|Topaz              |Yellow         |
 
 ## Installation
 
@@ -104,8 +67,8 @@ This is an example Winterfell setup with default values
 
 ```lua
 require("winterfell").setup {
-  gem = "emerald", -- values: "emerald" | "amber" | "apatite" | "crystal" | "diamond"| "kunzite" | "obsidian" | "ruby" | "sapphire" | "topaz"
-  style = "default", -- values: "default" | "soft" | "hard" 
+  accent = "emerald", -- values: "orange", "teal", "white", "cyan", "green", "magenta", "purple", "red", "blue", "yellow"
+  style = "default", -- values: "default", "soft", "hard" 
   options = {
     transparent = false, -- if true, background is transparent
     terminal_colors = true, -- if true, set terminal colors

@@ -1,7 +1,7 @@
 local config = require("winterfell.config")
 local palette = require("winterfell.palette")
 
-local spec = palette.load_spec(config.gem)
+local spec = palette.load_spec(config.accent)
 
 local function gen_mode(color)
   return {
